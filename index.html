@@ -334,5 +334,9 @@ if (!checkin || !checkout) {
 alert("Please select check-in and check-out dates");
 return;
 }
-const message = encodeURIComponent(`Hotel Booking Request:\nRoom: ${room}\nCheck-in: ${checkin}\nCheck-out: ${checkout}\nPle
+const message = encodeURIComponent(`Hotel Booking Request:\nRoom: ${room}\nCheck-in: ${checkin}\nCheck-out: ${checkout}\nPlease send availability and payment details.`);
+window.open(`https://wa.me/2347031551163?text=${message}`, '_blank');
+}
+</script>
+</body>
 </html>
