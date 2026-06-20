@@ -15,6 +15,22 @@
         .price-tag {
             background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
         }
+        .testimonial-card {
+            transition: transform 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-img {
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .gallery-img img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover img {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -27,9 +43,13 @@
             </button>
             <div class="hidden md:flex gap-6 overflow-x-auto">
                 <a href="#home" class="hover:text-green-200 transition whitespace-nowrap">Home</a>
+                <a href="#about" class="hover:text-green-200 transition whitespace-nowrap">About</a>
                 <a href="#services" class="hover:text-green-200 transition whitespace-nowrap">Services</a>
                 <a href="#pricing" class="hover:text-green-200 transition whitespace-nowrap">Pricing</a>
                 <a href="#stores" class="hover:text-green-200 transition whitespace-nowrap">Stores</a>
+                <a href="#gallery" class="hover:text-green-200 transition whitespace-nowrap">Gallery</a>
+                <a href="#testimonials" class="hover:text-green-200 transition whitespace-nowrap">Testimonials</a>
+                <a href="#blog" class="hover:text-green-200 transition whitespace-nowrap">Blog</a>
                 <a href="#contact" class="hover:text-green-200 transition whitespace-nowrap">Contact</a>
             </div>
         </div>
@@ -40,50 +60,89 @@
         <div class="max-w-6xl mx-auto px-6 text-center">
             <h2 class="text-5xl md:text-6xl font-bold mb-6">DOMJ'S GROUP</h2>
             <p class="text-xl md:text-2xl mb-8">Building Opportunities, Creating Wealth</p>
-            <p class="text-lg opacity-90">Investment • Farming • Real Estate • Hotel • E-Commerce • Education • Services</p>
-            <button onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})" class="mt-8 bg-white text-green-700 font-bold py-3 px-8 rounded-lg hover:bg-green-50 transition text-lg">
-                Explore Services
+            <p class="text-lg opacity-90">Investment • Farming • Real Estate • Hotel • E-Commerce • Education • Salon</p>
+            <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})" class="mt-8 bg-white text-green-700 font-bold py-3 px-8 rounded-lg hover:bg-green-50 transition text-lg">
+                Learn More
             </button>
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">About DOMJ'S GROUP</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://via.placeholder.com/400?text=About+DOMJ'S+GROUP" alt="About Us" class="rounded-lg shadow-lg">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-green-700 mb-4">Who We Are</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        DOMJ'S GROUP is a leading Nigerian conglomerate dedicated to creating wealth and building opportunities across multiple sectors. With over a decade of experience, we've helped thousands of Nigerians achieve financial freedom through smart investments, agricultural partnerships, and quality services.
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Our mission is to empower individuals and families by providing accessible, transparent, and profitable investment opportunities while maintaining the highest standards of customer service and integrity.
+                    </p>
+                    <h3 class="text-2xl font-bold text-green-700 mb-4 mt-6">Our Vision</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        To be Nigeria's most trusted wealth-creation platform, transforming lives through innovative solutions in investment, agriculture, real estate, education, and hospitality.
+                    </p>
+                    <div class="mt-8 grid grid-cols-3 gap-4">
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-green-700">5000+</p>
+                            <p class="text-gray-600">Happy Clients</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-green-700">₦2B+</p>
+                            <p class="text-gray-600">Invested</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-green-700">15+</p>
+                            <p class="text-gray-600">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
-    <section id="services" class="py-16 bg-white">
+    <section id="services" class="py-16 bg-gray-100">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Our Services</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Investment -->
-                <div class="bg-green-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
                     <i class="fas fa-chart-line text-green-700 text-4xl mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">Investment</h3>
-                    <p class="text-gray-600 mb-4">Grow your wealth with our investment opportunities. 35% returns.</p>
-                    <button onclick="orderViaWhatsApp('Investment Plans')" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
-                        Inquire Now
+                    <p class="text-gray-600 mb-4">Grow your wealth with our investment opportunities. 35-45% returns.</p>
+                    <button onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                        View Plans
                     </button>
                 </div>
 
                 <!-- Farming -->
-                <div class="bg-green-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
                     <i class="fas fa-leaf text-green-700 text-4xl mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">Farming</h3>
                     <p class="text-gray-600 mb-4">Agricultural investment with excellent returns per cycle.</p>
-                    <button onclick="orderViaWhatsApp('Farming Investment')" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                    <button onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
                         Learn More
                     </button>
                 </div>
 
                 <!-- Real Estate -->
-                <div class="bg-green-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
                     <i class="fas fa-building text-green-700 text-4xl mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">Real Estate</h3>
                     <p class="text-gray-600 mb-4">Prime property investments and land deals.</p>
-                    <button onclick="orderViaWhatsApp('Real Estate')" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                    <button onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
                         View Properties
                     </button>
                 </div>
 
                 <!-- Hotel -->
-                <div class="bg-green-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
                     <i class="fas fa-hotel text-green-700 text-4xl mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">Hotel</h3>
                     <p class="text-gray-600 mb-4">Premium hospitality and accommodation services.</p>
@@ -378,6 +437,38 @@
                         <p class="text-green-700 font-bold text-lg mb-3">₦2,000 - ₦30,000</p>
                         <button onclick="orderViaWhatsApp('DOMJ General Store: Home Goods')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
                     </div>
+
+                    <div class="bg-green-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Cosmetics" alt="Cosmetics" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Beauty & Cosmetics</h4>
+                        <p class="text-gray-600 text-sm mb-3">Skincare, makeup & fragrances</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦3,500 - ₦18,000</p>
+                        <button onclick="orderViaWhatsApp('DOMJ General Store: Beauty & Cosmetics')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+
+                    <div class="bg-green-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Books" alt="Books" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Books & Stationery</h4>
+                        <p class="text-gray-600 text-sm mb-3">Educational & entertainment books</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦1,000 - ₦12,000</p>
+                        <button onclick="orderViaWhatsApp('DOMJ General Store: Books & Stationery')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+
+                    <div class="bg-green-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Toys" alt="Toys" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Toys & Games</h4>
+                        <p class="text-gray-600 text-sm mb-3">Educational toys & board games</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦2,500 - ₦15,000</p>
+                        <button onclick="orderViaWhatsApp('DOMJ General Store: Toys & Games')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+
+                    <div class="bg-green-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Sports" alt="Sports" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Sports & Fitness</h4>
+                        <p class="text-gray-600 text-sm mb-3">Sportswear, equipment & accessories</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦4,000 - ₦25,000</p>
+                        <button onclick="orderViaWhatsApp('DOMJ General Store: Sports & Fitness')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
                 </div>
             </div>
 
@@ -418,6 +509,38 @@
                         <p class="text-gray-600 text-sm mb-3">Ceramic, porcelain tiles & paint</p>
                         <p class="text-green-700 font-bold text-lg mb-3">₦2,500 - ₦8,000</p>
                         <button onclick="orderViaWhatsApp('Building Materials: Tiles & Finish')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Roofing" alt="Roofing" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Roofing Materials</h4>
+                        <p class="text-gray-600 text-sm mb-3">Aluminum, zinc & asbestos sheets</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦5,000 - ₦20,000</p>
+                        <button onclick="orderViaWhatsApp('Building Materials: Roofing')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Doors" alt="Doors" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Doors & Windows</h4>
+                        <p class="text-gray-600 text-sm mb-3">Metal & wooden doors, window frames</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦15,000 - ₦80,000</p>
+                        <button onclick="orderViaWhatsApp('Building Materials: Doors & Windows')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Plumbing" alt="Plumbing" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Plumbing Fixtures</h4>
+                        <p class="text-gray-600 text-sm mb-3">Pipes, taps, tanks & bathroom fittings</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦3,000 - ₦50,000</p>
+                        <button onclick="orderViaWhatsApp('Building Materials: Plumbing')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Electrical" alt="Electrical" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Electrical Items</h4>
+                        <p class="text-gray-600 text-sm mb-3">Cables, switches, bulbs & accessories</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦2,000 - ₦35,000</p>
+                        <button onclick="orderViaWhatsApp('Building Materials: Electrical')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
                     </div>
                 </div>
             </div>
@@ -460,11 +583,43 @@
                         <p class="text-green-700 font-bold text-lg mb-3">₦25,000 - ₦100,000</p>
                         <button onclick="orderViaWhatsApp('DOMJ School: Online Courses')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Learn More</button>
                     </div>
+
+                    <div class="bg-yellow-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Training" alt="Training" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Vocational Training</h4>
+                        <p class="text-gray-600 text-sm mb-3">Skills training for job readiness</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦35,000 - ₦150,000</p>
+                        <button onclick="orderViaWhatsApp('DOMJ School: Vocational Training')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Enroll</button>
+                    </div>
+
+                    <div class="bg-yellow-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Scholarship" alt="Scholarship" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Scholarship Programs</h4>
+                        <p class="text-gray-600 text-sm mb-3">Merit-based scholarships available</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">Up to 100% coverage</p>
+                        <button onclick="orderViaWhatsApp('DOMJ School: Scholarship Programs')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Apply</button>
+                    </div>
+
+                    <div class="bg-yellow-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Exam" alt="Exam" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Exam Prep Courses</h4>
+                        <p class="text-gray-600 text-sm mb-3">WAEC, JAMB, NECO preparation</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦20,000 - ₦50,000</p>
+                        <button onclick="orderViaWhatsApp('DOMJ School: Exam Prep')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Register</button>
+                    </div>
+
+                    <div class="bg-yellow-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Tutoring" alt="Tutoring" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">One-on-One Tutoring</h4>
+                        <p class="text-gray-600 text-sm mb-3">Personalized academic support</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦5,000/session</p>
+                        <button onclick="orderViaWhatsApp('DOMJ School: One-on-One Tutoring')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Book</button>
+                    </div>
                 </div>
             </div>
 
             <!-- Barbing Saloon & Beauty -->
-            <div>
+            <div class="mb-16">
                 <div class="flex items-center mb-6">
                     <i class="fas fa-cut text-4xl text-green-700 mr-4"></i>
                     <h3 class="text-3xl font-bold text-green-700">DOMJ'S Barbing Salon & Beauty</h3>
@@ -501,7 +656,253 @@
                         <p class="text-green-700 font-bold text-lg mb-3">₦3,000 - ₦12,000</p>
                         <button onclick="orderViaWhatsApp('Beauty Salon: Nails & Makeup')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Book Now</button>
                     </div>
+
+                    <div class="bg-pink-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Massage" alt="Massage" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Massage & Spa</h4>
+                        <p class="text-gray-600 text-sm mb-3">Relaxation & therapeutic services</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦8,000 - ₦20,000</p>
+                        <button onclick="orderViaWhatsApp('Beauty Salon: Massage & Spa')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Book Now</button>
+                    </div>
+
+                    <div class="bg-pink-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Threading" alt="Threading" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Threading & Waxing</h4>
+                        <p class="text-gray-600 text-sm mb-3">Hair removal & eyebrow shaping</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦2,000 - ₦5,000</p>
+                        <button onclick="orderViaWhatsApp('Beauty Salon: Threading & Waxing')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Book Now</button>
+                    </div>
+
+                    <div class="bg-pink-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Kids" alt="Kids" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Kids Hair Services</h4>
+                        <p class="text-gray-600 text-sm mb-3">Haircuts & styling for children</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦2,000 - ₦4,000</p>
+                        <button onclick="orderViaWhatsApp('Beauty Salon: Kids Hair')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Book Now</button>
+                    </div>
+
+                    <div class="bg-pink-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Package" alt="Package" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Bridal Packages</h4>
+                        <p class="text-gray-600 text-sm mb-3">Complete wedding beauty services</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦40,000 - ₦150,000</p>
+                        <button onclick="orderViaWhatsApp('Beauty Salon: Bridal Package')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Inquire</button>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Gallery</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-img">
+                    <img src="https://via.placeholder.com/300?text=Hotel+Lobby" alt="Hotel Lobby" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-img">
+                    <img src="https://via.placeholder.com/300?text=Farm+Operations" alt="Farm Operations" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-img">
+                    <img src="https://via.placeholder.com/300?text=School+Campus" alt="School Campus" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-img">
+                    <img src="https://via.placeholder.com/300?text=Beauty+Salon" alt="Beauty Salon" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-img">
+                    <img src="https://via.placeholder.com/300?text=Building+Materials" alt="Building Materials" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-img">
+                    <img src="https://via.placeholder.com/300?text=Real+Estate" alt="Real Estate" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-img">
+                    <img src="https://via.placeholder.com/300?text=Property+Development" alt="Property Development" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-img">
+                    <img src="https://via.placeholder.com/300?text=Investment+Success" alt="Investment Success" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-img">
+                    <img src="https://via.placeholder.com/300?text=Team+DOMJ" alt="Team DOMJ" class="w-full h-48 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Customer Testimonials</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/50?text=Client+1" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Chioma Okonkwo</p>
+                            <p class="text-sm text-gray-600">Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+                    <p class="text-gray-600">
+                        "DOMJ'S GROUP transformed my financial future! I invested ₦100,000 and got ₦135,000 back. The transparency and professionalism are unmatched. Highly recommended!"
+                    </p>
+                </div>
+
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/50?text=Client+2" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Tunde Adeyemi</p>
+                            <p class="text-sm text-gray-600">Ibadan, Nigeria</p>
+                        </div>
+                    </div>
+                    <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+                    <p class="text-gray-600">
+                        "The farming investment package is excellent! I earned steady returns and the team provided constant updates. Best decision ever made!"
+                    </p>
+                </div>
+
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/50?text=Client+3" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Blessing Nwankwo</p>
+                            <p class="text-sm text-gray-600">Enugu, Nigeria</p>
+                        </div>
+                    </div>
+                    <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+                    <p class="text-gray-600">
+                        "My children are studying in DOMJ'S School and the results are amazing! Quality education, caring teachers, and affordable fees. Very satisfied!"
+                    </p>
+                </div>
+
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/50?text=Client+4" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Amara Eze</p>
+                            <p class="text-sm text-gray-600">Port Harcourt, Nigeria</p>
+                        </div>
+                    </div>
+                    <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+                    <p class="text-gray-600">
+                        "I bought my dream home through DOMJ'S Real Estate. The process was smooth, and the property quality is outstanding. Thank you!"
+                    </p>
+                </div>
+
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/50?text=Client+5" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Sarah Johnson</p>
+                            <p class="text-sm text-gray-600">Abuja, Nigeria</p>
+                        </div>
+                    </div>
+                    <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+                    <p class="text-gray-600">
+                        "The barbing salon and beauty services are top-notch! Professional staff, clean environment, and competitive prices. I'm a regular customer now!"
+                    </p>
+                </div>
+
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/50?text=Client+6" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Emeka Okoro</p>
+                            <p class="text-sm text-gray-600">Kano, Nigeria</p>
+                        </div>
+                    </div>
+                    <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+                    <p class="text-gray-600">
+                        "Building materials from DOMJ'S Group are high quality and affordable. Reliable delivery and excellent customer service. Highly praised!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Latest News & Blog</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://via.placeholder.com/400?text=Investment+Tips" alt="Investment" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <p class="text-sm text-green-700 font-bold mb-2">Investment Tips</p>
+                        <h3 class="text-xl font-bold mb-3">5 Smart Investment Strategies for 2026</h3>
+                        <p class="text-gray-600 mb-4">Learn how to maximize your investment returns with our expert strategies. Understanding the market trends can help you make better decisions...</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm text-gray-500">June 15, 2026</p>
+                            <a href="#" class="text-green-700 font-bold hover:underline">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://via.placeholder.com/400?text=Farming+Guide" alt="Farming" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <p class="text-sm text-green-700 font-bold mb-2">Agriculture</p>
+                        <h3 class="text-xl font-bold mb-3">Modern Farming Techniques That Boost Yields</h3>
+                        <p class="text-gray-600 mb-4">Discover innovative farming methods that increase productivity and profitability. Our experts share proven techniques used by successful farmers...</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm text-gray-500">June 12, 2026</p>
+                            <a href="#" class="text-green-700 font-bold hover:underline">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://via.placeholder.com/400?text=Real+Estate+Trends" alt="Real Estate" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <p class="text-sm text-green-700 font-bold mb-2">Real Estate</p>
+                        <h3 class="text-xl font-bold mb-3">Property Market Insights: Best Locations in Nigeria</h3>
+                        <p class="text-gray-600 mb-4">Explore the hottest real estate markets in Nigeria. Find out where properties are appreciating fastest and why these locations are attractive...</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm text-gray-500">June 10, 2026</p>
+                            <a href="#" class="text-green-700 font-bold hover:underline">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://via.placeholder.com/400?text=Education+Success" alt="Education" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <p class="text-sm text-green-700 font-bold mb-2">Education</p>
+                        <h3 class="text-xl font-bold mb-3">Success Stories: WAEC Excellence at DOMJ'S School</h3>
+                        <p class="text-gray-600 mb-4">Read inspiring stories of our students who achieved excellent WAEC results. Learn how quality education makes a difference in their futures...</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm text-gray-500">June 8, 2026</p>
+                            <a href="#" class="text-green-700 font-bold hover:underline">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://via.placeholder.com/400?text=Beauty+Wellness" alt="Beauty" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <p class="text-sm text-green-700 font-bold mb-2">Beauty & Wellness</p>
+                        <h3 class="text-xl font-bold mb-3">Skincare Secrets: Achieve Your Best Look</h3>
+                        <p class="text-gray-600 mb-4">Our beauty experts share skincare routines that work. Get tips on maintaining healthy, glowing skin naturally and effectively...</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm text-gray-500">June 5, 2026</p>
+                            <a href="#" class="text-green-700 font-bold hover:underline">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://via.placeholder.com/400?text=Business+Growth" alt="Growth" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <p class="text-sm text-green-700 font-bold mb-2">Business</p>
+                        <h3 class="text-xl font-bold mb-3">Growing Your Business: DOMJ'S Success Formula</h3>
+                        <p class="text-gray-600 mb-4">Discover how DOMJ'S Group has grown across multiple sectors. Learn the principles and strategies that drive our continuous expansion...</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm text-gray-500">June 1, 2026</p>
+                            <a href="#" class="text-green-700 font-bold hover:underline">Read More →</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
