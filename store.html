@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMJ'S GROUP - Building Opportunities, Creating Wealth</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .price-tag {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
+        .testimonial-card {
+            transition: transform 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-img {
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .gallery-img img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover img {
+            transform: scale(1.1);
+        }
+        .service-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .payment-method {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .payment-method.active {
+            border: 2px solid #16a34a;
+            background-color: rgba(22, 163, 74, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-green-700 text-white shadow-lg sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold hover:text-green-200">DOMJ'S GROUP</a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="hidden md:flex gap-6 overflow-x-auto">
+                <a href="index.html#home" class="hover:text-green-200 transition whitespace-nowrap">Home</a>
+                <a href="index.html#services" class="hover:text-green-200 transition whitespace-nowrap">Services</a>
+                <a href="index.html#pricing" class="hover:text-green-200 transition whitespace-nowrap">Pricing</a>
+                <a href="index.html#stores" class="hover:text-green-200 transition whitespace-nowrap">Stores</a>
+                <a href="wallet.html" class="hover:text-green-200 transition whitespace-nowrap flex items-center gap-2">
+                    <i class="fas fa-wallet"></i>Wallet
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Container -->
+    <div id="page-content">
+        <!-- HOME PAGE (Default) -->
+        <div id="home-page">
+            <!-- Hero Section -->
+            <section id="home" class="bg-gradient-to-r from-green-600 to-green-800 text-white py-20">
+                <div class="max-w-6xl mx-auto px-6 text-center">
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6">DOMJ'S GROUP</h2>
+                    <p class="text-xl md:text-2xl mb-8">Building Opportunities, Creating Wealth</p>
+                    <p class="text-lg opacity-90">Investment • Farming • Real Estate • Hotel • E-Commerce • Education • Salon</p>
+                    <button onclick="scrollToSection('services')" class="mt-8 bg-white text-green-700 font-bold py-3 px-8 rounded-lg hover:bg-green-50 transition text-lg">
+                        Explore Services
+                    </button>
+                </div>
+            </section>
+
+            <!-- Services Grid -->
+            <section id="services" class="py-16 bg-white">
+                <div class="max-w-6xl mx-auto px-6">
+                    <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Our Services</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Investment -->
+                        <div class="service-card bg-white p-6 rounded-lg shadow hover:shadow-lg" onclick="showPage('investment')">
+                            <i class="fas fa-chart-line text-green-700 text-4xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-3">Investment</h3>
+                            <p class="text-gray-600 mb-4">Grow your wealth with our investment opportunities. 35-45% returns.</p>
+                            <button class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                                Get Started
+                            </button>
+                        </div>
+
+                        <!-- Farming -->
+                        <div class="service-card bg-white p-6 rounded-lg shadow hover:shadow-lg" onclick="showPage('farming')">
+                            <i class="fas fa-leaf text-green-700 text-4xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-3">Farming</h3>
+                            <p class="text-gray-600 mb-4">Agricultural investment with excellent returns per cycle.</p>
+                            <button class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                                Get Started
+                            </button>
+                        </div>
+
+                        <!-- Real Estate -->
+                        <div class="service-card bg-white p-6 rounded-lg shadow hover:shadow-lg" onclick="showPage('realestate')">
+                            <i class="fas fa-building text-green-700 text-4xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-3">Real Estate</h3>
+                            <p class="text-gray-600 mb-4">Prime property investments and land deals.</p>
+                            <button class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                                Get Started
+                            </button>
+                        </div>
+
+                        <!-- Hotel -->
+                        <div class="service-card bg-white p-6 rounded-lg shadow hover:shadow-lg" onclick="showPage('hotel')">
+                            <i class="fas fa-hotel text-green-700 text-4xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-3">Hotel</h3>
+                            <p class="text-gray-600 mb-4">Premium hospitality and accommodation services.</p>
+                            <button class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                                Get Started
+                            </button>
+                        </div>
+
+                        <!-- School -->
+                        <div class="service-card bg-white p-6 rounded-lg shadow hover:shadow-lg" onclick="showPage('school')">
+                            <i class="fas fa-graduation-cap text-green-700 text-4xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-3">School</h3>
+                            <p class="text-gray-600 mb-4">Quality education and professional training.</p>
+                            <button class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                                Get Started
+                            </button>
+                        </div>
+
+                        <!-- Beauty -->
+                        <div class="service-card bg-white p-6 rounded-lg shadow hover:shadow-lg" onclick="showPage('beauty')">
+                            <i class="fas fa-spa text-green-700 text-4xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-3">Beauty Salon</h3>
+                            <p class="text-gray-600 mb-4">Professional beauty and barbing services.</p>
+                            <button class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                                Get Started
+                            </button>
+                        </div>
+
+                        <!-- Building Materials -->
+                        <div class="service-card bg-white p-6 rounded-lg shadow hover:shadow-lg" onclick="showPage('materials')">
+                            <i class="fas fa-hammer text-green-700 text-4xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-3">Building Materials</h3>
+                            <p class="text-gray-600 mb-4">Quality construction materials and supplies.</p>
+                            <button class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                                Get Started
+                            </button>
+                        </div>
+
+                        <!-- General Store -->
+                        <div class="service-card bg-white p-6 rounded-lg shadow hover:shadow-lg" onclick="showPage('store')">
+                            <i class="fas fa-shopping-bag text-green-700 text-4xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-3">General Store</h3>
+                            <p class="text-gray-600 mb-4">Wide range of quality products and goods.</p>
+                            <button class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- INVESTMENT PAGE -->
+        <div id="investment-page" class="hidden">
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <button onclick="showPage('home')" class="mb-8 flex items-center gap-2 text-green-700 hover:text-green-900 font-bold">
+                    <i class="fas fa-arrow-left"></i> Back to Services
+                </button>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-green-600 to-green-800 text-white p-8">
+                        <h1 class="text-4xl font-bold mb-2">Investment Plans</h1>
+                        <p class="text-lg opacity-90">Grow Your Wealth with DOMJ'S GROUP</p>
+                    </div>
+
+                    <div class="p-8">
+                        <form id="investment-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Full Name *</label>
+                                    <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="Enter your name">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Email Address *</label>
+                                    <input type="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="your@email.com">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Phone Number *</label>
+                                    <input type="tel" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="07031551163">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Investment Amount *</label>
+                                    <input type="number" required min="50000" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="₦50,000 minimum">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Investment Plan *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                        <option value="">Select a plan</option>
+                                        <option value="Starter (₦50,000) - 35% Returns">Starter (₦50,000) - 35% Returns</option>
+                                        <option value="Standard (₦100,000) - 35% Returns">Standard (₦100,000) - 35% Returns</option>
+                                        <option value="Premium (₦500,000) - 40% Returns">Premium (₦500,000) - 40% Returns</option>
+                                        <option value="Elite (₦1,000,000+) - 45% Returns">Elite (₦1,000,000+) - 45% Returns</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Duration *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                        <option value="">Select duration</option>
+                                        <option value="6 Months">6 Months</option>
+                                        <option value="1 Year">1 Year</option>
+                                        <option value="2 Years">2 Years</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-3">Payment Method *</label>
+                                <div class="space-y-3">
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="DOMJ Wallet" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">DOMJ Wallet</p>
+                                            <p class="text-sm text-gray-600">Pay directly from your DOMJ wallet</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Bank Transfer" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Bank Transfer</p>
+                                            <p class="text-sm text-gray-600">Transfer directly to DOMJ bank account</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="WhatsApp Pay" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">WhatsApp Pay</p>
+                                            <p class="text-sm text-gray-600">Send payment via WhatsApp</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Installment Plan" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Installment Plan</p>
+                                            <p class="text-sm text-gray-600">Pay in convenient installments</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2">Additional Notes</label>
+                                <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" rows="3" placeholder="Any additional information..."></textarea>
+                            </div>
+
+                            <button type="button" onclick="submitOrder('investment')" class="w-full bg-green-700 text-white font-bold py-4 rounded-lg text-lg hover:bg-green-800 transition">
+                                Place Investment Order
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FARMING PAGE -->
+        <div id="farming-page" class="hidden">
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <button onclick="showPage('home')" class="mb-8 flex items-center gap-2 text-green-700 hover:text-green-900 font-bold">
+                    <i class="fas fa-arrow-left"></i> Back to Services
+                </button>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-green-600 to-green-800 text-white p-8">
+                        <h1 class="text-4xl font-bold mb-2">Farming Investment</h1>
+                        <p class="text-lg opacity-90">Agricultural Opportunities with Guaranteed Returns</p>
+                    </div>
+
+                    <div class="p-8">
+                        <form id="farming-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Full Name *</label>
+                                    <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="Enter your name">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Email Address *</label>
+                                    <input type="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="your@email.com">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Phone Number *</label>
+                                    <input type="tel" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="07031551163">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Investment Amount *</label>
+                                    <input type="number" required min="75000" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="₦75,000 minimum">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Farm Size *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                        <option value="">Select farm size</option>
+                                        <option value="Small Farm (0.5 Hectare) - ₦75,000">Small Farm (0.5 Hectare) - ₦75,000</option>
+                                        <option value="Medium Farm (1.5 Hectares) - ₦200,000">Medium Farm (1.5 Hectares) - ₦200,000</option>
+                                        <option value="Large Farm (5 Hectares) - ₦500,000">Large Farm (5 Hectares) - ₦500,000</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Crop Type *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                        <option value="">Select crop</option>
+                                        <option value="Maize">Maize</option>
+                                        <option value="Cassava">Cassava</option>
+                                        <option value="Mixed Crops">Mixed Crops</option>
+                                        <option value="Rice">Rice</option>
+                                        <option value="Vegetables">Vegetables</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-3">Payment Method *</label>
+                                <div class="space-y-3">
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="DOMJ Wallet" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">DOMJ Wallet</p>
+                                            <p class="text-sm text-gray-600">Pay directly from your DOMJ wallet</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Bank Transfer" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Bank Transfer</p>
+                                            <p class="text-sm text-gray-600">Transfer directly to DOMJ bank account</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="WhatsApp Pay" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">WhatsApp Pay</p>
+                                            <p class="text-sm text-gray-600">Send payment via WhatsApp</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2">Additional Notes</label>
+                                <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" rows="3" placeholder="Any additional information..."></textarea>
+                            </div>
+
+                            <button type="button" onclick="submitOrder('farming')" class="w-full bg-green-700 text-white font-bold py-4 rounded-lg text-lg hover:bg-green-800 transition">
+                                Place Farming Order
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HOTEL PAGE -->
+        <div id="hotel-page" class="hidden">
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <button onclick="showPage('home')" class="mb-8 flex items-center gap-2 text-green-700 hover:text-green-900 font-bold">
+                    <i class="fas fa-arrow-left"></i> Back to Services
+                </button>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8">
+                        <h1 class="text-4xl font-bold mb-2">Hotel Booking</h1>
+                        <p class="text-lg opacity-90">Book Your Perfect Stay with DOMJ'S Hotel</p>
+                    </div>
+
+                    <div class="p-8">
+                        <form id="hotel-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Full Name *</label>
+                                    <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="Enter your name">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Email Address *</label>
+                                    <input type="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="your@email.com">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Phone Number *</label>
+                                    <input type="tel" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="07031551163">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Room Type *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                        <option value="">Select room type</option>
+                                        <option value="Standard Room - ₦18,000/night">Standard Room - ₦18,000/night</option>
+                                        <option value="Deluxe Room - ₦35,000/night">Deluxe Room - ₦35,000/night</option>
+                                        <option value="Suite - ₦65,000/night">Suite - ₦65,000/night</option>
+                                        <option value="Presidential Suite - ₦150,000/night">Presidential Suite - ₦150,000/night</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Check-in Date *</label>
+                                    <input type="date" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Check-out Date *</label>
+                                    <input type="date" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2">Number of Guests *</label>
+                                <input type="number" required min="1" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="1">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-3">Payment Method *</label>
+                                <div class="space-y-3">
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="DOMJ Wallet" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">DOMJ Wallet</p>
+                                            <p class="text-sm text-gray-600">Pay directly from your DOMJ wallet</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Credit Card" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Credit Card</p>
+                                            <p class="text-sm text-gray-600">Visa, Mastercard, or other cards</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Bank Transfer" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Bank Transfer</p>
+                                            <p class="text-sm text-gray-600">Direct bank transfer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2">Special Requests</label>
+                                <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" rows="3" placeholder="Any special requests..."></textarea>
+                            </div>
+
+                            <button type="button" onclick="submitOrder('hotel')" class="w-full bg-blue-700 text-white font-bold py-4 rounded-lg text-lg hover:bg-blue-800 transition">
+                                Complete Hotel Booking
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- REAL ESTATE PAGE -->
+        <div id="realestate-page" class="hidden">
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <button onclick="showPage('home')" class="mb-8 flex items-center gap-2 text-green-700 hover:text-green-900 font-bold">
+                    <i class="fas fa-arrow-left"></i> Back to Services
+                </button>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-orange-600 to-orange-800 text-white p-8">
+                        <h1 class="text-4xl font-bold mb-2">Real Estate</h1>
+                        <p class="text-lg opacity-90">Find Your Dream Property with DOMJ'S Real Estate</p>
+                    </div>
+
+                    <div class="p-8">
+                        <form id="realestate-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Full Name *</label>
+                                    <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="Enter your name">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Email Address *</label>
+                                    <input type="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="your@email.com">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Phone Number *</label>
+                                    <input type="tel" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="07031551163">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Property Type *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                        <option value="">Select property type</option>
+                                        <option value="Vacant Land (500 sqm) - ₦2,500,000">Vacant Land (500 sqm) - ₦2,500,000</option>
+                                        <option value="3-Bedroom Apartment - ₦8,500,000">3-Bedroom Apartment - ₦8,500,000</option>
+                                        <option value="4-Bedroom Duplex - ₦15,000,000">4-Bedroom Duplex - ₦15,000,000</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2">Budget Range *</label>
+                                <select required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                    <option value="">Select budget</option>
+                                    <option value="₦1M - ₦5M">₦1M - ₦5M</option>
+                                    <option value="₦5M - ₦10M">₦5M - ₦10M</option>
+                                    <option value="₦10M - ₦20M">₦10M - ₦20M</option>
+                                    <option value="₦20M+">₦20M+</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-3">Payment Method *</label>
+                                <div class="space-y-3">
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="DOMJ Wallet" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">DOMJ Wallet</p>
+                                            <p class="text-sm text-gray-600">Pay from your DOMJ wallet</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Bank Transfer" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Bank Transfer</p>
+                                            <p class="text-sm text-gray-600">Direct bank transfer with installments</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Mortgage Plan" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Mortgage Plan</p>
+                                            <p class="text-sm text-gray-600">Flexible mortgage payment plan</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2">Additional Notes</label>
+                                <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" rows="3" placeholder="Your property preferences..."></textarea>
+                            </div>
+
+                            <button type="button" onclick="submitOrder('realestate')" class="w-full bg-orange-700 text-white font-bold py-4 rounded-lg text-lg hover:bg-orange-800 transition">
+                                Request Property Details
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCHOOL PAGE -->
+        <div id="school-page" class="hidden">
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <button onclick="showPage('home')" class="mb-8 flex items-center gap-2 text-green-700 hover:text-green-900 font-bold">
+                    <i class="fas fa-arrow-left"></i> Back to Services
+                </button>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-8">
+                        <h1 class="text-4xl font-bold mb-2">DOMJ'S School & Education</h1>
+                        <p class="text-lg opacity-90">Quality Education for a Brighter Future</p>
+                    </div>
+
+                    <div class="p-8">
+                        <form id="school-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Parent/Guardian Name *</label>
+                                    <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="Enter name">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Email Address *</label>
+                                    <input type="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="your@email.com">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Phone Number *</label>
+                                    <input type="tel" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="07031551163">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Student Name *</label>
+                                    <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="Student name">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Program *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                        <option value="">Select program</option>
+                                        <option value="Primary School - ₦45,000/term">Primary School - ₦45,000/term</option>
+                                        <option value="Secondary School - ₦65,000/term">Secondary School - ₦65,000/term</option>
+                                        <option value="Online Courses - ₦25,000-₦100,000">Online Courses - ₦25,000-₦100,000</option>
+                                        <option value="Vocational Training - ₦35,000-₦150,000">Vocational Training - ₦35,000-₦150,000</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Class/Level *</label>
+                                    <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="e.g., JSS1, Primary 4">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-3">Payment Method *</label>
+                                <div class="space-y-3">
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="DOMJ Wallet" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">DOMJ Wallet</p>
+                                            <p class="text-sm text-gray-600">Pay from your DOMJ wallet</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Bank Transfer" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Bank Transfer</p>
+                                            <p class="text-sm text-gray-600">Direct bank transfer</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Installment" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Installment Plan</p>
+                                            <p class="text-sm text-gray-600">Pay per term or monthly</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" onclick="submitOrder('school')" class="w-full bg-purple-700 text-white font-bold py-4 rounded-lg text-lg hover:bg-purple-800 transition">
+                                Enroll Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BEAUTY PAGE -->
+        <div id="beauty-page" class="hidden">
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <button onclick="showPage('home')" class="mb-8 flex items-center gap-2 text-green-700 hover:text-green-900 font-bold">
+                    <i class="fas fa-arrow-left"></i> Back to Services
+                </button>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-pink-600 to-pink-800 text-white p-8">
+                        <h1 class="text-4xl font-bold mb-2">DOMJ'S Beauty & Barbing Salon</h1>
+                        <p class="text-lg opacity-90">Professional Beauty & Grooming Services</p>
+                    </div>
+
+                    <div class="p-8">
+                        <form id="beauty-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Full Name *</label>
+                                    <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="Enter your name">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Phone Number *</label>
+                                    <input type="tel" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="07031551163">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Service *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                        <option value="">Select service</option>
+                                        <option value="Men's Haircut - ₦2,500-₦5,000">Men's Haircut - ₦2,500-₦5,000</option>
+                                        <option value="Ladies Hair Services - ₦5,000-₦15,000">Ladies Hair Services - ₦5,000-₦15,000</option>
+                                        <option value="Facial & Skincare - ₦3,500-₦8,000">Facial & Skincare - ₦3,500-₦8,000</option>
+                                        <option value="Nails & Makeup - ₦3,000-₦12,000">Nails & Makeup - ₦3,000-₦12,000</option>
+                                        <option value="Massage & Spa - ₦8,000-₦20,000">Massage & Spa - ₦8,000-₦20,000</option>
+                                        <option value="Bridal Package - ₦40,000-₦150,000">Bridal Package - ₦40,000-₦150,000</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Preferred Date *</label>
+                                    <input type="date" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2">Preferred Time *</label>
+                                <input type="time" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-3">Payment Method *</label>
+                                <div class="space-y-3">
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="DOMJ Wallet" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">DOMJ Wallet</p>
+                                            <p class="text-sm text-gray-600">Pay from your DOMJ wallet</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Cash on Service" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Cash on Service</p>
+                                            <p class="text-sm text-gray-600">Pay when service is provided</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Bank Transfer" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Bank Transfer</p>
+                                            <p class="text-sm text-gray-600">Transfer payment in advance</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2">Special Requests</label>
+                                <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" rows="3" placeholder="Any special requests or preferences..."></textarea>
+                            </div>
+
+                            <button type="button" onclick="submitOrder('beauty')" class="w-full bg-pink-700 text-white font-bold py-4 rounded-lg text-lg hover:bg-pink-800 transition">
+                                Book Service
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BUILDING MATERIALS PAGE -->
+        <div id="materials-page" class="hidden">
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <button onclick="showPage('home')" class="mb-8 flex items-center gap-2 text-green-700 hover:text-green-900 font-bold">
+                    <i class="fas fa-arrow-left"></i> Back to Services
+                </button>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-yellow-600 to-yellow-800 text-white p-8">
+                        <h1 class="text-4xl font-bold mb-2">DOMJ'S Building Materials</h1>
+                        <p class="text-lg opacity-90">Quality Construction Materials & Supplies</p>
+                    </div>
+
+                    <div class="p-8">
+                        <form id="materials-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Full Name *</label>
+                                    <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="Enter your name">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Email Address *</label>
+                                    <input type="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="your@email.com">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Phone Number *</label>
+                                    <input type="tel" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="07031551163">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Material Type *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                        <option value="">Select material</option>
+                                        <option value="Cement & Sand - ₦3,500/bag">Cement & Sand - ₦3,500/bag</option>
+                                        <option value="Bricks & Blocks - ₦30,000/1000">Bricks & Blocks - ₦30,000/1000</option>
+                                        <option value="Steel & Iron - ₦250,000/ton">Steel & Iron - ₦250,000/ton</option>
+                                        <option value="Tiles & Finish - ₦2,500-₦8,000">Tiles & Finish - ₦2,500-₦8,000</option>
+                                        <option value="Roofing Materials - ₦5,000-₦20,000">Roofing Materials - ₦5,000-₦20,000</option>
+                                        <option value="Doors & Windows - ₦15,000-₦80,000">Doors & Windows - ₦15,000-₦80,000</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2">Quantity *</label>
+                                <input type="number" required min="1" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="Enter quantity">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2">Delivery Location *</label>
+                                <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" rows="2" placeholder="Enter delivery address"></textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-3">Payment Method *</label>
+                                <div class="space-y-3">
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="DOMJ Wallet" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">DOMJ Wallet</p>
+                                            <p class="text-sm text-gray-600">Pay from your DOMJ wallet</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Bank Transfer" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Bank Transfer</p>
+                                            <p class="text-sm text-gray-600">Transfer before delivery</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Cash on Delivery" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Cash on Delivery</p>
+                                            <p class="text-sm text-gray-600">Pay upon delivery</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" onclick="submitOrder('materials')" class="w-full bg-yellow-700 text-white font-bold py-4 rounded-lg text-lg hover:bg-yellow-800 transition">
+                                Place Order
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GENERAL STORE PAGE -->
+        <div id="store-page" class="hidden">
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <button onclick="showPage('home')" class="mb-8 flex items-center gap-2 text-green-700 hover:text-green-900 font-bold">
+                    <i class="fas fa-arrow-left"></i> Back to Services
+                </button>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8">
+                        <h1 class="text-4xl font-bold mb-2">DOMJ'S General Store</h1>
+                        <p class="text-lg opacity-90">Quality Products & Goods for Every Need</p>
+                    </div>
+
+                    <div class="p-8">
+                        <form id="store-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Full Name *</label>
+                                    <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="Enter your name">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Email Address *</label>
+                                    <input type="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="your@email.com">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Phone Number *</label>
+                                    <input type="tel" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="07031551163">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-2">Product Category *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                                        <option value="">Select category</option>
+                                        <option value="Fresh Groceries">Fresh Groceries</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Clothing">Clothing</option>
+                                        <option value="Home Goods">Home Goods</option>
+                                        <option value="Beauty & Cosmetics">Beauty & Cosmetics</option>
+                                        <option value="Books & Stationery">Books & Stationery</option>
+                                        <option value="Toys & Games">Toys & Games</option>
+                                        <option value="Sports & Fitness">Sports & Fitness</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2">Product Description *</label>
+                                <textarea required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" rows="2" placeholder="What product are you looking for?"></textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2">Quantity *</label>
+                                <input type="number" required min="1" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" placeholder="Enter quantity">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2">Delivery Address *</label>
+                                <textarea required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" rows="2" placeholder="Where should we deliver?"></textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-3">Payment Method *</label>
+                                <div class="space-y-3">
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="DOMJ Wallet" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">DOMJ Wallet</p>
+                                            <p class="text-sm text-gray-600">Pay from your DOMJ wallet</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Bank Transfer" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Bank Transfer</p>
+                                            <p class="text-sm text-gray-600">Transfer payment in advance</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method border-2 border-gray-300 p-4 rounded-lg flex items-center">
+                                        <input type="radio" name="payment" value="Cash on Delivery" class="mr-3 payment-radio">
+                                        <div>
+                                            <p class="font-bold">Cash on Delivery</p>
+                                            <p class="text-sm text-gray-600">Pay when product arrives</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" onclick="submitOrder('store')" class="w-full bg-blue-700 text-white font-bold py-4 rounded-lg text-lg hover:bg-blue-800 transition">
+                                Place Order
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-3xl font-bold text-white mb-4">DOMJ'S GROUP</p>
+            <p class="mb-6">Building Opportunities, Creating Wealth • Nigeria</p>
+            <div class="flex justify-center gap-8 mb-8 flex-wrap">
+                <a href="tel:07031551163" class="hover:text-white transition">
+                    <i class="fas fa-phone mr-2"></i>07031551163
+                </a>
+                <a href="mailto:domsco4live@gmail.com" class="hover:text-white transition">
+                    <i class="fas fa-envelope mr-2"></i>domsco4live@gmail.com
+                </a>
+            </div>
+            <p>&copy; 2026 DOMJ'S GROUP. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2347031551163" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl text-4xl z-50 transition">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Page Navigation
+        function showPage(page) {
+            const pages = document.querySelectorAll('[id$="-page"]');
+            pages.forEach(p => p.classList.add('hidden'));
+            document.getElementById(page + '-page').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Payment Method Selection
+        document.querySelectorAll('.payment-radio').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const parent = this.closest('.payment-method');
+                parent.parentElement.querySelectorAll('.payment-method').forEach(m => {
+                    m.classList.remove('active');
+                });
+                parent.classList.add('active');
+            });
+        });
+
+        // Submit Order Function
+        function submitOrder(serviceName) {
+            const formId = serviceName + '-form';
+            const form = document.getElementById(formId);
+            const formData = new FormData(form);
+
+            let message = `*NEW ORDER - ${serviceName.toUpperCase()}*\n\n`;
+
+            for (let [key, value] of formData.entries()) {
+                if (value) {
+                    message += `${key.toUpperCase()}: ${value}\n`;
+                }
+            }
+
+            message += `\n📅 Order Date: ${new Date().toLocaleString()}\n`;
+            message += `Service: ${serviceName.charAt(0).toUpperCase() + serviceName.slice(1)}\n`;
+
+            const whatsappMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/2347031551163?text=${whatsappMessage}`, '_blank');
+
+            alert('✅ Order submitted successfully! Our team will contact you shortly via WhatsApp.');
+            form.reset();
+        }
+
+        // Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            alert("📱 Use the navigation links or WhatsApp us: 07031551163");
+        });
+    </script>
+</body>
+</html>
