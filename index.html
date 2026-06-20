@@ -1,69 +1,293 @@
-<h2 class="text-5xl font-bold text-center mb-12 text-green-800">Get In Touch</h2>
-<div class="grid md:grid-cols-2 gap-12">
-<div>
-<h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
-<div class="space-y-6 text-lg">
-<p><strong>Phone / WhatsApp:</strong><br><a href="tel:07031551163" class="text-green-700 hover:underline">07031551163</a></p>
-<p><strong>Email:</strong><br><a href="mailto:domsco4live@gmail.com" class="text-green-700 hover:underline">domsco4live@gmail.com</a></p>
-<p><strong>Business Hours:</strong><br>Mon - Sat: 8am - 6pm</p>
-</div>
-</div>
-<form action="https://formspree.io/f/myourformcode" method="POST" class="space-y-6">
-<input type="text" name="name" placeholder="Full Name" required class="w-full p-5 border border-gray-300 rounded-2xl focus:outline-none focus:border-green-600">
-<input type="email" name="email" placeholder="Email Address" required class="w-full p-5 border border-gray-300 rounded-2xl focus:outline-none focus:border-green-600">
-<input type="tel" name="phone" placeholder="Phone Number" class="w-full p-5 border border-gray-300 rounded-2xl focus:outline-none focus:border-green-600">
-<textarea name="message" placeholder="Message (Hotel booking, investment, etc.)" rows="5" required class="w-full p-5 border border-gray-300 rounded-2xl focus:outline-none focus:border-green-600"></textarea>
-<button type="submit" class="w-full bg-green-700 text-white font-bold py-6 rounded-2xl text-xl hover:bg-green-800 transition">Send Message</button>
-</form>
-</div>
-</div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMJ'S GROUP - Building Opportunities, Creating Wealth</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-green-700 text-white shadow-lg sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">DOMJ'S GROUP</h1>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="hidden md:flex gap-6">
+                <a href="#home" class="hover:text-green-200 transition">Home</a>
+                <a href="#services" class="hover:text-green-200 transition">Services</a>
+                <a href="#contact" class="hover:text-green-200 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-<!-- Footer -->
-<footer class="bg-gray-900 text-gray-400 py-16">
-<div class="max-w-6xl mx-auto px-6 text-center">
-<p class="text-3xl font-bold text-white mb-4">DOMJ'S GROUP</p>
-<p class="mb-6">Building Opportunities, Creating Wealth • Nigeria</p>
-<div class="flex justify-center gap-8 mb-8">
-<a href="tel:07031551163" class="hover:text-white">07031551163</a>
-<a href="mailto:domsco4live@gmail.com" class="hover:text-white">domsco4live@gmail.com</a>
-</div>
-<p>&copy; 2026 DOMJ'S GROUP. All Rights Reserved.</p>
-</div>
-</footer>
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-green-600 to-green-800 text-white py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6">DOMJ'S GROUP</h2>
+            <p class="text-xl md:text-2xl mb-8">Building Opportunities, Creating Wealth</p>
+            <p class="text-lg opacity-90">Investment | Farming | Real Estate | Hotel Hospitality</p>
+            <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="mt-8 bg-white text-green-700 font-bold py-3 px-8 rounded-lg hover:bg-green-50 transition text-lg">
+                Get Started
+            </button>
+        </div>
+    </section>
 
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/2347031551163" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl text-4xl z-50">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Our Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Investment -->
+                <div class="bg-green-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <i class="fas fa-chart-line text-green-700 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Investment</h3>
+                    <p class="text-gray-600 mb-4">Grow your wealth with our investment opportunities.</p>
+                    <button onclick="orderViaWhatsApp('Investment Plans')" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                        Inquire Now
+                    </button>
+                </div>
 
-<script>
-document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-alert("📱 Use the navigation links or WhatsApp us: 07031551163");
-});
+                <!-- Farming -->
+                <div class="bg-green-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <i class="fas fa-leaf text-green-700 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Farming</h3>
+                    <p class="text-gray-600 mb-4">Agricultural investment with excellent returns.</p>
+                    <button onclick="orderViaWhatsApp('Farming Investment')" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                        Learn More
+                    </button>
+                </div>
 
-function calculateReturn() {
-const amount = parseFloat(document.getElementById('amount').value);
-if (!amount || amount < 10000) {
-document.getElementById('result').innerHTML = "Please enter an amount from ₦10,000";
-return;
-}
-const result = Math.round(amount * 1.35);
-document.getElementById('result').innerHTML = `Projected Return: <span class="text-yellow-400 font-bold">₦${result.toLocaleString()}</span><br><small class="text-sm opacity-75">(After one farming cycle • Estimate)</small>`;
-}
+                <!-- Real Estate -->
+                <div class="bg-green-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <i class="fas fa-building text-green-700 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Real Estate</h3>
+                    <p class="text-gray-600 mb-4">Prime property investments and land deals.</p>
+                    <button onclick="orderViaWhatsApp('Real Estate')" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                        View Properties
+                    </button>
+                </div>
 
-function orderViaWhatsApp(item) {
-const message = encodeURIComponent(`Hello, I'm interested in ${item}. Please send more details.`);
-window.open(`https://wa.me/2347031551163?text=${message}`, '_blank');
-}
+                <!-- Hotel -->
+                <div class="bg-green-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <i class="fas fa-hotel text-green-700 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Hotel</h3>
+                    <p class="text-gray-600 mb-4">Premium hospitality and accommodation services.</p>
+                    <button onclick="document.getElementById('booking-form').scrollIntoView({behavior: 'smooth'})" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-function submitBooking() {
-const checkin = document.getElementById('checkin').value;
-const checkout = document.getElementById('checkout').value;
-const room = document.getElementById('roomtype').value;
-if (!checkin || !checkout) {
-alert("Please select check-in and check-out dates");
-return;
-}
-const message = encodeURIComponent(`Hotel Booking Request:\nRoom: ${room}\nCheck-in: ${checkin}\nCheck-out: ${checkout}\nPle
+    <!-- Return Calculator -->
+    <section class="py-16 bg-green-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Calculate Your Returns</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <p class="text-gray-600 mb-6">Enter your investment amount to see projected returns:</p>
+                <div class="flex flex-col md:flex-row gap-4 mb-6">
+                    <input type="number" id="amount" placeholder="Enter amount (₦10,000 minimum)" min="10000" class="flex-1 p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                    <button onclick="calculateReturn()" class="bg-green-700 text-white font-bold py-4 px-8 rounded-lg hover:bg-green-800 transition">
+                        Calculate
+                    </button>
+                </div>
+                <div id="result" class="text-center text-lg text-gray-700"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotel Booking Section -->
+    <section id="booking-form" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Book a Room</h2>
+            <div class="bg-green-50 p-8 rounded-lg shadow-lg">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Check-in Date</label>
+                        <input type="date" id="checkin" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Check-out Date</label>
+                        <input type="date" id="checkout" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-bold mb-2">Room Type</label>
+                    <select id="roomtype" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                        <option>Standard Room</option>
+                        <option>Deluxe Room</option>
+                        <option>Suite</option>
+                        <option>Presidential Suite</option>
+                    </select>
+                </div>
+                <button onclick="submitBooking()" class="w-full bg-green-700 text-white font-bold py-4 rounded-lg text-lg hover:bg-green-800 transition">
+                    Complete Booking
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <h2 class="text-5xl font-bold text-center mb-12 text-green-800">Get In Touch</h2>
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <!-- Contact Information -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                <div class="space-y-6 text-lg">
+                    <p>
+                        <strong>Phone / WhatsApp:</strong><br>
+                        <a href="tel:07031551163" class="text-green-700 hover:underline">07031551163</a>
+                    </p>
+                    <p>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:domsco4live@gmail.com" class="text-green-700 hover:underline">domsco4live@gmail.com</a>
+                    </p>
+                    <p>
+                        <strong>Business Hours:</strong><br>
+                        Mon - Sat: 8am - 6pm (WAT)
+                    </p>
+                    <p>
+                        <strong>Location:</strong><br>
+                        Nigeria
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-6">Send us a Message</h3>
+                <form id="contact-form" class="space-y-4">
+                    <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                    <input type="email" name="email" placeholder="Email Address" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                    <input type="tel" name="phone" placeholder="Phone Number" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                    <textarea name="message" placeholder="Message (Hotel booking, investment, etc.)" rows="5" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600"></textarea>
+                    <button type="button" onclick="submitContactForm()" class="w-full bg-green-700 text-white font-bold py-4 rounded-lg text-lg hover:bg-green-800 transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-3xl font-bold text-white mb-4">DOMJ'S GROUP</p>
+            <p class="mb-6">Building Opportunities, Creating Wealth • Nigeria</p>
+            <div class="flex justify-center gap-8 mb-8">
+                <a href="tel:07031551163" class="hover:text-white transition">
+                    <i class="fas fa-phone mr-2"></i>07031551163
+                </a>
+                <a href="mailto:domsco4live@gmail.com" class="hover:text-white transition">
+                    <i class="fas fa-envelope mr-2"></i>domsco4live@gmail.com
+                </a>
+            </div>
+            <p>&copy; 2026 DOMJ'S GROUP. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2347031551163?text=Hello%20DOMJ'S%20GROUP" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl text-4xl z-50 transition">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            alert("📱 Use the navigation links or WhatsApp us: 07031551163");
+        });
+
+        // Calculate Return Function
+        function calculateReturn() {
+            const amountInput = document.getElementById('amount');
+            const amount = parseFloat(amountInput.value);
+            const resultDiv = document.getElementById('result');
+
+            if (!amount || amount < 10000) {
+                resultDiv.innerHTML = '<span class="text-red-600 font-bold">❌ Please enter an amount of ₦10,000 or more</span>';
+                amountInput.focus();
+                return;
+            }
+
+            const result = Math.round(amount * 1.35);
+            const profit = result - amount;
+
+            resultDiv.innerHTML = `
+                <div class="bg-green-100 p-6 rounded-lg">
+                    <p class="mb-2">Investment Amount: <span class="text-green-700 font-bold">₦${amount.toLocaleString()}</span></p>
+                    <p class="mb-4">Projected Return: <span class="text-green-700 font-bold text-xl">₦${result.toLocaleString()}</span></p>
+                    <p class="text-sm text-gray-600">Profit: ₦${profit.toLocaleString()} (35% return)</p>
+                    <p class="text-xs text-gray-500 mt-2">* After one farming cycle • Estimate based on current terms</p>
+                    <button onclick="orderViaWhatsApp('Investment of ₦' + ${amount.toLocaleString()} + ' - Farming Plan')" class="mt-4 bg-green-700 text-white py-2 px-6 rounded hover:bg-green-800 transition">
+                        Proceed with Investment
+                    </button>
+                </div>
+            `;
+        }
+
+        // Order via WhatsApp
+        function orderViaWhatsApp(item) {
+            const message = encodeURIComponent(`Hello DOMJ'S GROUP, I'm interested in: ${item}. Please send more details and pricing.`);
+            window.open(`https://wa.me/2347031551163?text=${message}`, '_blank');
+        }
+
+        // Submit Booking
+        function submitBooking() {
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+            const room = document.getElementById('roomtype').value;
+
+            if (!checkin || !checkout) {
+                alert("❌ Please select both check-in and check-out dates");
+                return;
+            }
+
+            if (new Date(checkin) >= new Date(checkout)) {
+                alert("❌ Check-out date must be after check-in date");
+                return;
+            }
+
+            const message = encodeURIComponent(`Hotel Booking Request:\n\nRoom Type: ${room}\nCheck-in: ${checkin}\nCheck-out: ${checkout}\n\nPlease confirm availability and send booking details.`);
+            window.open(`https://wa.me/2347031551163?text=${message}`, '_blank');
+        }
+
+        // Submit Contact Form
+        function submitContactForm() {
+            const form = document.getElementById('contact-form');
+            const name = form.querySelector('input[name="name"]').value;
+            const email = form.querySelector('input[name="email"]').value;
+            const phone = form.querySelector('input[name="phone"]').value;
+            const message = form.querySelector('textarea[name="message"]').value;
+
+            if (!name || !email || !message) {
+                alert("❌ Please fill in all required fields (Name, Email, Message)");
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("❌ Please enter a valid email address");
+                return;
+            }
+
+            const whatsappMessage = encodeURIComponent(`New Contact Form Submission:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`);
+            window.open(`https://wa.me/2347031551163?text=${whatsappMessage}`, '_blank');
+
+            form.reset();
+            alert("✅ Message sent! We'll contact you shortly via WhatsApp.");
+        }
+    </script>
+</body>
 </html>
