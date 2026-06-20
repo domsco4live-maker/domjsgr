@@ -12,6 +12,9 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        .price-tag {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -22,10 +25,12 @@
             <button id="mobile-menu-btn" class="md:hidden text-2xl">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="hidden md:flex gap-6">
-                <a href="#home" class="hover:text-green-200 transition">Home</a>
-                <a href="#services" class="hover:text-green-200 transition">Services</a>
-                <a href="#contact" class="hover:text-green-200 transition">Contact</a>
+            <div class="hidden md:flex gap-6 overflow-x-auto">
+                <a href="#home" class="hover:text-green-200 transition whitespace-nowrap">Home</a>
+                <a href="#services" class="hover:text-green-200 transition whitespace-nowrap">Services</a>
+                <a href="#pricing" class="hover:text-green-200 transition whitespace-nowrap">Pricing</a>
+                <a href="#stores" class="hover:text-green-200 transition whitespace-nowrap">Stores</a>
+                <a href="#contact" class="hover:text-green-200 transition whitespace-nowrap">Contact</a>
             </div>
         </div>
     </nav>
@@ -35,9 +40,9 @@
         <div class="max-w-6xl mx-auto px-6 text-center">
             <h2 class="text-5xl md:text-6xl font-bold mb-6">DOMJ'S GROUP</h2>
             <p class="text-xl md:text-2xl mb-8">Building Opportunities, Creating Wealth</p>
-            <p class="text-lg opacity-90">Investment | Farming | Real Estate | Hotel Hospitality</p>
-            <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="mt-8 bg-white text-green-700 font-bold py-3 px-8 rounded-lg hover:bg-green-50 transition text-lg">
-                Get Started
+            <p class="text-lg opacity-90">Investment • Farming • Real Estate • Hotel • E-Commerce • Education • Services</p>
+            <button onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})" class="mt-8 bg-white text-green-700 font-bold py-3 px-8 rounded-lg hover:bg-green-50 transition text-lg">
+                Explore Services
             </button>
         </div>
     </section>
@@ -51,7 +56,7 @@
                 <div class="bg-green-50 p-6 rounded-lg shadow hover:shadow-lg transition">
                     <i class="fas fa-chart-line text-green-700 text-4xl mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">Investment</h3>
-                    <p class="text-gray-600 mb-4">Grow your wealth with our investment opportunities.</p>
+                    <p class="text-gray-600 mb-4">Grow your wealth with our investment opportunities. 35% returns.</p>
                     <button onclick="orderViaWhatsApp('Investment Plans')" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
                         Inquire Now
                     </button>
@@ -61,7 +66,7 @@
                 <div class="bg-green-50 p-6 rounded-lg shadow hover:shadow-lg transition">
                     <i class="fas fa-leaf text-green-700 text-4xl mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">Farming</h3>
-                    <p class="text-gray-600 mb-4">Agricultural investment with excellent returns.</p>
+                    <p class="text-gray-600 mb-4">Agricultural investment with excellent returns per cycle.</p>
                     <button onclick="orderViaWhatsApp('Farming Investment')" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
                         Learn More
                     </button>
@@ -82,9 +87,420 @@
                     <i class="fas fa-hotel text-green-700 text-4xl mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">Hotel</h3>
                     <p class="text-gray-600 mb-4">Premium hospitality and accommodation services.</p>
-                    <button onclick="document.getElementById('booking-form').scrollIntoView({behavior: 'smooth'})" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
+                    <button onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition w-full">
                         Book Now
                     </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Packages Section -->
+    <section id="pricing" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Pricing & Packages</h2>
+
+            <!-- Investment Plans -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold text-green-700 mb-6 border-b-2 border-green-700 pb-3">💰 Investment Plans</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-sm">Starter</p>
+                            <p class="text-2xl font-bold">₦50,000</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Basic Investment</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ 35% Returns</li>
+                            <li>✓ 6-month cycle</li>
+                            <li>✓ Certificate included</li>
+                        </ul>
+                        <button onclick="orderViaWhatsApp('Investment: ₦50,000 Starter Plan')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Invest Now</button>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition border-2 border-green-700">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-sm">Popular</p>
+                            <p class="text-2xl font-bold">₦100,000</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Standard Investment</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ 35% Returns</li>
+                            <li>✓ 6-month cycle</li>
+                            <li>✓ Priority support</li>
+                            <li>✓ Certificate + Letter</li>
+                        </ul>
+                        <button onclick="orderViaWhatsApp('Investment: ₦100,000 Standard Plan')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Invest Now</button>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-sm">Premium</p>
+                            <p class="text-2xl font-bold">₦500,000</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Premium Investment</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ 40% Returns</li>
+                            <li>✓ 6-month cycle</li>
+                            <li>✓ Personal manager</li>
+                            <li>✓ Regular updates</li>
+                        </ul>
+                        <button onclick="orderViaWhatsApp('Investment: ₦500,000 Premium Plan')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Invest Now</button>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-sm">Elite</p>
+                            <p class="text-2xl font-bold">₦1,000,000+</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Elite Investment</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ 45% Returns</li>
+                            <li>✓ Custom terms</li>
+                            <li>✓ Dedicated team</li>
+                            <li>✓ Flexible options</li>
+                        </ul>
+                        <button onclick="orderViaWhatsApp('Investment: ₦1,000,000+ Elite Plan')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Invest Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Farming Packages -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold text-green-700 mb-6 border-b-2 border-green-700 pb-3">🌾 Farming Packages</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-sm">Small Farm</p>
+                            <p class="text-2xl font-bold">₦75,000</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">0.5 Hectare</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ Maize/Cassava</li>
+                            <li>✓ 35% profit</li>
+                            <li>✓ 4-month cycle</li>
+                            <li>✓ Fertilizer included</li>
+                        </ul>
+                        <button onclick="orderViaWhatsApp('Farming: ₦75,000 Small Farm - 0.5 Hectare')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Subscribe</button>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition border-2 border-green-700">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-sm">Medium Farm</p>
+                            <p class="text-2xl font-bold">₦200,000</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">1.5 Hectares</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ Mixed crops</li>
+                            <li>✓ 38% profit</li>
+                            <li>✓ 4-month cycle</li>
+                            <li>✓ Full support</li>
+                        </ul>
+                        <button onclick="orderViaWhatsApp('Farming: ₦200,000 Medium Farm - 1.5 Hectares')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Subscribe</button>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-sm">Large Farm</p>
+                            <p class="text-2xl font-bold">₦500,000</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">5 Hectares</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ Commercial farm</li>
+                            <li>✓ 42% profit</li>
+                            <li>✓ 4-month cycle</li>
+                            <li>✓ Direct management</li>
+                        </ul>
+                        <button onclick="orderViaWhatsApp('Farming: ₦500,000 Large Farm - 5 Hectares')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Room Pricing -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold text-green-700 mb-6 border-b-2 border-green-700 pb-3">🏨 Hotel Room Rates (Per Night)</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-lg font-bold">₦18,000</p>
+                            <p class="text-xs">per night</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Standard Room</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ 1 Queen bed</li>
+                            <li>✓ AC & WiFi</li>
+                            <li>✓ Basic amenities</li>
+                            <li>✓ TV & Mini-bar</li>
+                        </ul>
+                        <button onclick="submitBooking('Standard Room', '₦18,000')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Book Now</button>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-lg font-bold">₦35,000</p>
+                            <p class="text-xs">per night</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Deluxe Room</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ King bed</li>
+                            <li>✓ Premium AC & WiFi</li>
+                            <li>✓ Spa bath & shower</li>
+                            <li>✓ 24/7 room service</li>
+                        </ul>
+                        <button onclick="submitBooking('Deluxe Room', '₦35,000')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Book Now</button>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition border-2 border-green-700">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-lg font-bold">₦65,000</p>
+                            <p class="text-xs">per night</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Suite</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ Bedroom & lounge</li>
+                            <li>✓ Premium amenities</li>
+                            <li>✓ City view</li>
+                            <li>✓ VIP treatment</li>
+                        </ul>
+                        <button onclick="submitBooking('Suite', '₦65,000')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Book Now</button>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-lg font-bold">₦150,000</p>
+                            <p class="text-xs">per night</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Presidential Suite</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ Full luxury</li>
+                            <li>✓ Penthouse view</li>
+                            <li>✓ Personal butler</li>
+                            <li>✓ Exclusive lounge</li>
+                        </ul>
+                        <button onclick="submitBooking('Presidential Suite', '₦150,000')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real Estate Pricing -->
+            <div>
+                <h3 class="text-3xl font-bold text-green-700 mb-6 border-b-2 border-green-700 pb-3">🏠 Real Estate Properties</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-sm">Vacant Land</p>
+                            <p class="text-2xl font-bold">₦2,500,000</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">500 sq meters</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ Fenced plot</li>
+                            <li>✓ Good location</li>
+                            <li>✓ Access road</li>
+                            <li>✓ Ready to build</li>
+                        </ul>
+                        <button onclick="orderViaWhatsApp('Real Estate: ₦2.5M Land - 500 sq meters')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Inquire</button>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-sm">Apartment</p>
+                            <p class="text-2xl font-bold">₦8,500,000</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">3-Bedroom Apt</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ Modern design</li>
+                            <li>✓ Fully furnished</li>
+                            <li>✓ Parking space</li>
+                            <li>✓ 24/7 security</li>
+                        </ul>
+                        <button onclick="orderViaWhatsApp('Real Estate: ₦8.5M 3-Bedroom Apartment')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Inquire</button>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition border-2 border-green-700">
+                        <div class="price-tag text-white p-3 rounded mb-4 text-center">
+                            <p class="text-sm">Duplex</p>
+                            <p class="text-2xl font-bold">₦15,000,000</p>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">4-Bedroom Duplex</h4>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li>✓ Premium location</li>
+                            <li>✓ Pool & garden</li>
+                            <li>✓ 3 parking spots</li>
+                            <li>✓ Luxury finishes</li>
+                        </ul>
+                        <button onclick="orderViaWhatsApp('Real Estate: ₦15M 4-Bedroom Duplex')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Inquire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-Commerce Stores Section -->
+    <section id="stores" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">DOMJ'S E-Commerce Stores</h2>
+
+            <!-- DOMJ'S Store -->
+            <div class="mb-16">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-shopping-bag text-4xl text-green-700 mr-4"></i>
+                    <h3 class="text-3xl font-bold text-green-700">DOMJ'S General Store</h3>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-green-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Groceries" alt="Groceries" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Fresh Groceries</h4>
+                        <p class="text-gray-600 text-sm mb-3">Fresh vegetables, fruits & spices</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦3,000 - ₦15,000</p>
+                        <button onclick="orderViaWhatsApp('DOMJ General Store: Groceries')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+
+                    <div class="bg-green-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Electronics" alt="Electronics" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Electronics</h4>
+                        <p class="text-gray-600 text-sm mb-3">Phone accessories, chargers & more</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦1,500 - ₦25,000</p>
+                        <button onclick="orderViaWhatsApp('DOMJ General Store: Electronics')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+
+                    <div class="bg-green-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Clothing" alt="Clothing" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Clothing</h4>
+                        <p class="text-gray-600 text-sm mb-3">Fashion & casual wear for all ages</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦5,000 - ₦20,000</p>
+                        <button onclick="orderViaWhatsApp('DOMJ General Store: Clothing')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+
+                    <div class="bg-green-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=HomeGoods" alt="Home Goods" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Home Goods</h4>
+                        <p class="text-gray-600 text-sm mb-3">Bedding, kitchenware & decor</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦2,000 - ₦30,000</p>
+                        <button onclick="orderViaWhatsApp('DOMJ General Store: Home Goods')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Building Materials Store -->
+            <div class="mb-16">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-hammer text-4xl text-green-700 mr-4"></i>
+                    <h3 class="text-3xl font-bold text-green-700">DOMJ'S Building Materials</h3>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-blue-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Cement" alt="Cement" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Cement & Sand</h4>
+                        <p class="text-gray-600 text-sm mb-3">Quality Portland cement & sharp sand</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦3,500 / bag</p>
+                        <button onclick="orderViaWhatsApp('Building Materials: Cement & Sand')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Bricks" alt="Bricks" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Bricks & Blocks</h4>
+                        <p class="text-gray-600 text-sm mb-3">Solid blocks, interlocking & clay bricks</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦30,000 / 1000</p>
+                        <button onclick="orderViaWhatsApp('Building Materials: Bricks & Blocks')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Steel" alt="Steel" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Steel & Iron</h4>
+                        <p class="text-gray-600 text-sm mb-3">Reinforcement steel, nails & pipes</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦250,000 / ton</p>
+                        <button onclick="orderViaWhatsApp('Building Materials: Steel & Iron')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Tiles" alt="Tiles" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Tiles & Finish</h4>
+                        <p class="text-gray-600 text-sm mb-3">Ceramic, porcelain tiles & paint</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦2,500 - ₦8,000</p>
+                        <button onclick="orderViaWhatsApp('Building Materials: Tiles & Finish')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Services -->
+            <div class="mb-16">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-graduation-cap text-4xl text-green-700 mr-4"></i>
+                    <h3 class="text-3xl font-bold text-green-700">DOMJ'S School & Education</h3>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-yellow-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Tuition" alt="Tuition" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Primary School</h4>
+                        <p class="text-gray-600 text-sm mb-3">Classes 1-6, comprehensive curriculum</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦45,000/term</p>
+                        <button onclick="orderViaWhatsApp('DOMJ School: Primary School Admission')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Enroll Now</button>
+                    </div>
+
+                    <div class="bg-yellow-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Secondary" alt="Secondary" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Secondary School</h4>
+                        <p class="text-gray-600 text-sm mb-3">JSS1-SSS3, STEM & Arts programs</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦65,000/term</p>
+                        <button onclick="orderViaWhatsApp('DOMJ School: Secondary School Admission')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Enroll Now</button>
+                    </div>
+
+                    <div class="bg-yellow-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Coaching" alt="Coaching" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">After-School Coaching</h4>
+                        <p class="text-gray-600 text-sm mb-3">Math, English, Sciences & Languages</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦15,000/month</p>
+                        <button onclick="orderViaWhatsApp('DOMJ School: After-School Coaching')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Register</button>
+                    </div>
+
+                    <div class="bg-yellow-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Courses" alt="Courses" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Online Courses</h4>
+                        <p class="text-gray-600 text-sm mb-3">Professional skills & certifications</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦25,000 - ₦100,000</p>
+                        <button onclick="orderViaWhatsApp('DOMJ School: Online Courses')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barbing Saloon & Beauty -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-cut text-4xl text-green-700 mr-4"></i>
+                    <h3 class="text-3xl font-bold text-green-700">DOMJ'S Barbing Salon & Beauty</h3>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-pink-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Haircut" alt="Haircut" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Men's Haircut</h4>
+                        <p class="text-gray-600 text-sm mb-3">Professional cuts, fades & styles</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦2,500 - ₦5,000</p>
+                        <button onclick="orderViaWhatsApp('Barbing Salon: Men\\'s Haircut Appointment')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Book Now</button>
+                    </div>
+
+                    <div class="bg-pink-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Ladies" alt="Ladies" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Ladies Hair Services</h4>
+                        <p class="text-gray-600 text-sm mb-3">Braids, weaves, coloring & styling</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦5,000 - ₦15,000</p>
+                        <button onclick="orderViaWhatsApp('Beauty Salon: Ladies Hair Services')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Book Now</button>
+                    </div>
+
+                    <div class="bg-pink-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Facial" alt="Facial" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Facial & Skincare</h4>
+                        <p class="text-gray-600 text-sm mb-3">Facials, waxing & skin treatments</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦3,500 - ₦8,000</p>
+                        <button onclick="orderViaWhatsApp('Beauty Salon: Facial & Skincare')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Book Now</button>
+                    </div>
+
+                    <div class="bg-pink-50 p-4 rounded-lg shadow hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/200?text=Nails" alt="Nails" class="w-full h-40 object-cover rounded mb-3">
+                        <h4 class="font-bold text-lg mb-2">Nails & Makeup</h4>
+                        <p class="text-gray-600 text-sm mb-3">Manicure, pedicure & makeup artistry</p>
+                        <p class="text-green-700 font-bold text-lg mb-3">₦3,000 - ₦12,000</p>
+                        <button onclick="orderViaWhatsApp('Beauty Salon: Nails & Makeup')" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition text-sm">Book Now</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,47 +509,16 @@
     <!-- Return Calculator -->
     <section class="py-16 bg-green-50">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Calculate Your Returns</h2>
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Calculate Your Investment Returns</h2>
             <div class="bg-white p-8 rounded-lg shadow-lg">
                 <p class="text-gray-600 mb-6">Enter your investment amount to see projected returns:</p>
                 <div class="flex flex-col md:flex-row gap-4 mb-6">
-                    <input type="number" id="amount" placeholder="Enter amount (₦10,000 minimum)" min="10000" class="flex-1 p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
+                    <input type="number" id="amount" placeholder="Enter amount (₦50,000 minimum)" min="50000" class="flex-1 p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
                     <button onclick="calculateReturn()" class="bg-green-700 text-white font-bold py-4 px-8 rounded-lg hover:bg-green-800 transition">
                         Calculate
                     </button>
                 </div>
                 <div id="result" class="text-center text-lg text-gray-700"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hotel Booking Section -->
-    <section id="booking-form" class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Book a Room</h2>
-            <div class="bg-green-50 p-8 rounded-lg shadow-lg">
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-gray-700 font-bold mb-2">Check-in Date</label>
-                        <input type="date" id="checkin" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 font-bold mb-2">Check-out Date</label>
-                        <input type="date" id="checkout" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
-                    </div>
-                </div>
-                <div class="mb-6">
-                    <label class="block text-gray-700 font-bold mb-2">Room Type</label>
-                    <select id="roomtype" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
-                        <option>Standard Room</option>
-                        <option>Deluxe Room</option>
-                        <option>Suite</option>
-                        <option>Presidential Suite</option>
-                    </select>
-                </div>
-                <button onclick="submitBooking()" class="w-full bg-green-700 text-white font-bold py-4 rounded-lg text-lg hover:bg-green-800 transition">
-                    Complete Booking
-                </button>
             </div>
         </div>
     </section>
@@ -172,7 +557,7 @@
                     <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
                     <input type="email" name="email" placeholder="Email Address" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
                     <input type="tel" name="phone" placeholder="Phone Number" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600">
-                    <textarea name="message" placeholder="Message (Hotel booking, investment, etc.)" rows="5" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600"></textarea>
+                    <textarea name="message" placeholder="Message or inquiry" rows="5" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600"></textarea>
                     <button type="button" onclick="submitContactForm()" class="w-full bg-green-700 text-white font-bold py-4 rounded-lg text-lg hover:bg-green-800 transition">
                         Send Message
                     </button>
@@ -186,7 +571,7 @@
         <div class="max-w-6xl mx-auto px-6 text-center">
             <p class="text-3xl font-bold text-white mb-4">DOMJ'S GROUP</p>
             <p class="mb-6">Building Opportunities, Creating Wealth • Nigeria</p>
-            <div class="flex justify-center gap-8 mb-8">
+            <div class="flex justify-center gap-8 mb-8 flex-wrap">
                 <a href="tel:07031551163" class="hover:text-white transition">
                     <i class="fas fa-phone mr-2"></i>07031551163
                 </a>
@@ -194,7 +579,10 @@
                     <i class="fas fa-envelope mr-2"></i>domsco4live@gmail.com
                 </a>
             </div>
-            <p>&copy; 2026 DOMJ'S GROUP. All Rights Reserved.</p>
+            <div class="text-sm mb-6">
+                <p>© 2026 DOMJ'S GROUP. All Rights Reserved.</p>
+                <p class="mt-2">Investment • Farming • Real Estate • Hotel • E-Commerce • Education • Salon</p>
+            </div>
         </div>
     </footer>
 
@@ -215,20 +603,25 @@
             const amount = parseFloat(amountInput.value);
             const resultDiv = document.getElementById('result');
 
-            if (!amount || amount < 10000) {
-                resultDiv.innerHTML = '<span class="text-red-600 font-bold">❌ Please enter an amount of ₦10,000 or more</span>';
+            if (!amount || amount < 50000) {
+                resultDiv.innerHTML = '<span class="text-red-600 font-bold">❌ Please enter an amount of ₦50,000 or more</span>';
                 amountInput.focus();
                 return;
             }
 
-            const result = Math.round(amount * 1.35);
+            let returnRate = 0.35;
+            if (amount >= 100000) returnRate = 0.38;
+            if (amount >= 500000) returnRate = 0.42;
+            if (amount >= 1000000) returnRate = 0.45;
+
+            const result = Math.round(amount * (1 + returnRate));
             const profit = result - amount;
 
             resultDiv.innerHTML = `
                 <div class="bg-green-100 p-6 rounded-lg">
                     <p class="mb-2">Investment Amount: <span class="text-green-700 font-bold">₦${amount.toLocaleString()}</span></p>
                     <p class="mb-4">Projected Return: <span class="text-green-700 font-bold text-xl">₦${result.toLocaleString()}</span></p>
-                    <p class="text-sm text-gray-600">Profit: ₦${profit.toLocaleString()} (35% return)</p>
+                    <p class="text-sm text-gray-600">Profit: ₦${profit.toLocaleString()} (${(returnRate * 100).toFixed(0)}% return)</p>
                     <p class="text-xs text-gray-500 mt-2">* After one farming cycle • Estimate based on current terms</p>
                     <button onclick="orderViaWhatsApp('Investment of ₦' + ${amount.toLocaleString()} + ' - Farming Plan')" class="mt-4 bg-green-700 text-white py-2 px-6 rounded hover:bg-green-800 transition">
                         Proceed with Investment
@@ -244,13 +637,12 @@
         }
 
         // Submit Booking
-        function submitBooking() {
-            const checkin = document.getElementById('checkin').value;
-            const checkout = document.getElementById('checkout').value;
-            const room = document.getElementById('roomtype').value;
+        function submitBooking(roomType, price) {
+            const checkin = prompt("Enter check-in date (YYYY-MM-DD):");
+            const checkout = prompt("Enter check-out date (YYYY-MM-DD):");
 
             if (!checkin || !checkout) {
-                alert("❌ Please select both check-in and check-out dates");
+                alert("❌ Please provide both dates");
                 return;
             }
 
@@ -259,7 +651,7 @@
                 return;
             }
 
-            const message = encodeURIComponent(`Hotel Booking Request:\n\nRoom Type: ${room}\nCheck-in: ${checkin}\nCheck-out: ${checkout}\n\nPlease confirm availability and send booking details.`);
+            const message = encodeURIComponent(`Hotel Booking Request:\n\nRoom Type: ${roomType}\nPrice: ${price}\nCheck-in: ${checkin}\nCheck-out: ${checkout}\n\nPlease confirm availability and send booking confirmation.`);
             window.open(`https://wa.me/2347031551163?text=${message}`, '_blank');
         }
 
